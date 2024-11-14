@@ -136,18 +136,35 @@ nav ul li a:hover {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .social-links a {
-    color: var(--text-secondary);
-    font-size: 2rem;
+    color: var(--text-primary);
+    font-size: 1.5rem;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .social-links a:hover {
     color: var(--primary-color);
     transform: translateY(-3px);
+}
+
+.social-links i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(124, 58, 237, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover i {
+    background: rgba(124, 58, 237, 0.2);
 }
 
 /* About Section */
