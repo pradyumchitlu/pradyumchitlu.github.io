@@ -100,10 +100,12 @@
         <section id="contact" class="contact">
             <div class="container">
                 <h2 class="scroll-animation">Get In Touch</h2>
-                <form id="contact-form" class="scroll-animation">
+                <form action="https://formspree.io/f/xldenagr" method="POST" id="contact-form" class="scroll-animation">
                     <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="_replyto" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Your Message" required></textarea>
+                    <input type="hidden" name="_subject" value="New contact form submission">
+                    <input type="text" name="_gotcha" style="display:none">
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
