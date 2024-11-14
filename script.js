@@ -63,4 +63,34 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transform = 'scale(1)';
         });
     });
+
+    // Theme switching functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const icon = themeToggle.querySelector('i');
+    
+    // Check for saved theme preference, otherwise use system preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.dataset.theme = savedTheme;
+        updateIcon(savedTheme === 'light');
+    } else {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
+        updateIcon(!prefersDark);
+    }
+
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+        const isLight = document.documentElement.dataset.theme === 'light';
+        const newTheme = isLight ? 'dark' : 'light';
+        
+        document.documentElement.dataset.theme = newTheme;
+        localStorage.setItem('theme', newTheme);
+        updateIcon(!isLight);
+    });
+
+    // Update icon based on theme
+    function updateIcon(isLight) {
+        icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+    }
 });

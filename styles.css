@@ -3,15 +3,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 :root {
+    /* Dark theme variables */
     --primary-color: #7C3AED;
     --secondary-color: #4F46E5;
     --background-dark: #0F172A;
     --text-primary: #F8FAFC;
     --text-secondary: #94A3B8;
     --card-background: #1E293B;
+    --hover-color: #9333EA;
+}
+
+:root[data-theme="light"] {
+    --primary-color: #7C3AED;
+    --secondary-color: #4F46E5;
+    --background-dark: #ffffff;
+    --text-primary: #1E293B;
+    --text-secondary: #475569;
+    --card-background: #F1F5F9;
     --hover-color: #9333EA;
 }
 
@@ -334,6 +346,47 @@ nav ul li a:hover {
 .contact textarea {
     height: 150px;
     resize: vertical;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.theme-toggle:focus {
+    outline: none;
+}
+
+/* Adjust the icon based on theme */
+:root[data-theme="light"] .theme-toggle .fa-moon {
+    display: block;
+}
+
+:root[data-theme="light"] .theme-toggle .fa-sun {
+    display: none;
+}
+
+:root:not([data-theme="light"]) .theme-toggle .fa-moon {
+    display: none;
+}
+
+:root:not([data-theme="light"]) .theme-toggle .fa-sun {
+    display: block;
 }
 
 /* Footer */
