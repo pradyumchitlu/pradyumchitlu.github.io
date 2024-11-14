@@ -45,6 +45,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* Navigation */
@@ -53,7 +55,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: var(--background-dark);
+    background-color: var(--background);
     position: fixed;
     width: 100%;
     top: 0;
@@ -100,20 +102,24 @@ nav ul li a:hover {
     text-align: center;
     padding: 150px 0 100px;
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     bottom: 0;
     background: radial-gradient(circle at center, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
     z-index: 0;
@@ -169,8 +175,10 @@ nav ul li a:hover {
 
 /* About Section */
 .about {
-    padding: 100px 0;
     background-color: var(--background);
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .about h2, .projects h2, .contact h2 {
@@ -278,8 +286,10 @@ nav ul li a:hover {
 
 /* Projects Section */
 .projects {
-    padding: 100px 0;
     background-color: var(--background);
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .project-grid {
@@ -335,6 +345,8 @@ nav ul li a:hover {
 .contact {
     background-color: var(--background);
     padding: 100px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .contact form {
@@ -453,6 +465,8 @@ footer {
 
 /* Main Content */
 main {
+    position: relative;
+    z-index: 1;
     margin-top: 60px; /* Height of the fixed navbar */
 }
 
