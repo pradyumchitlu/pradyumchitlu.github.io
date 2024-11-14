@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const handleScrollAnimation = () => {
         scrollElements.forEach((el) => {
-            if (elementInView(el, 100)) {
+            if (elementInView(el, 90)) {
                 displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
             }
         })
     }
@@ -32,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Trigger once on load for elements already in view
-    handleScrollAnimation();
+    window.addEventListener('load', () => {
+        handleScrollAnimation();
+    });
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

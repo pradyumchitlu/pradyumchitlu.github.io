@@ -15,6 +15,9 @@
     --text-secondary: #94A3B8;
     --card-background: #1E293B;
     --hover-color: #9333EA;
+    --background: #0F172A;
+    --border-color: #4F46E5;
+    --input-background: #1E293B;
 }
 
 :root[data-theme="light"] {
@@ -25,6 +28,9 @@
     --text-secondary: #475569;
     --card-background: #F1F5F9;
     --hover-color: #9333EA;
+    --background: #ffffff;
+    --border-color: #D1D5DB;
+    --input-background: #F9FAFB;
 }
 
 body {
@@ -36,9 +42,9 @@ body {
 
 /* Container */
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 0 2rem;
 }
 
 /* Navigation */
@@ -92,13 +98,14 @@ nav ul li a:hover {
     background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(79, 70, 229, 0.1) 100%);
     color: var(--text-primary);
     text-align: center;
-    padding: 150px 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+    padding: 150px 0 100px;
+    min-height: 100vh;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .hero::before {
@@ -110,12 +117,6 @@ nav ul li a:hover {
     bottom: 0;
     background: radial-gradient(circle at center, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
     z-index: 0;
-}
-
-.hero-content {
-    max-width: 800px;
-    position: relative;
-    z-index: 1;
 }
 
 .hero h1 {
@@ -151,15 +152,15 @@ nav ul li a:hover {
 
 /* About Section */
 .about {
-    background-color: var(--background-dark);
     padding: 100px 0;
+    background-color: var(--background);
 }
 
 .about h2, .projects h2, .contact h2 {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
     text-align: center;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -259,20 +260,24 @@ nav ul li a:hover {
 }
 
 /* Projects Section */
+.projects {
+    padding: 100px 0;
+    background-color: var(--background);
+}
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
 .project-card {
     background-color: var(--card-background);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(124, 58, 237, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
@@ -311,7 +316,7 @@ nav ul li a:hover {
 
 /* Contact Section */
 .contact {
-    background-color: var(--background-dark);
+    background-color: var(--background);
     padding: 100px 0;
 }
 
@@ -420,27 +425,28 @@ footer {
 /* Scroll Animations */
 .scroll-animation {
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease-out;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
 }
 
-.scroll-animation.active {
+.scroll-animation.scrolled {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Delay cascade effect for multiple elements */
-.scroll-animation:nth-child(2) {
-    transition-delay: 0.2s;
+/* Main Content */
+main {
+    margin-top: 60px; /* Height of the fixed navbar */
 }
 
-.scroll-animation:nth-child(3) {
-    transition-delay: 0.4s;
-}
-
-/* Smooth Scroll Behavior */
-html {
-    scroll-behavior: smooth;
+/* Section Headings */
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Responsive Design */
@@ -555,4 +561,9 @@ html {
 
 .hero-content, .about-content, .project-card {
     animation: fadeIn 1s ease-out;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
 }
