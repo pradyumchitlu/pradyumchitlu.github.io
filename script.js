@@ -11,12 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     const displayScrollElement = (element) => {
-        element.classList.add('active');
+        element.classList.add('scrolled');
     };
-    
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('scrolled');
+    };
+
     const handleScrollAnimation = () => {
         scrollElements.forEach((el) => {
-            if (elementInView(el, 90)) {
+            if (elementInView(el, 100)) {
                 displayScrollElement(el);
             }
         })
@@ -87,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
-            card.style.transform = 'scale(1.05)';
+            card.style.transform = 'scale(1.02)';
         });
         
         card.addEventListener('mouseleave', () => {
@@ -118,33 +122,4 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateThemeIcon(theme) {
         icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     }
-
-    // Mobile Menu
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.querySelector('nav ul');
-    const menuIcon = mobileMenuBtn.querySelector('i');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        menuIcon.classList.toggle('fa-bars');
-        menuIcon.classList.toggle('fa-times');
-    });
-
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            menuIcon.classList.remove('fa-times');
-            menuIcon.classList.add('fa-bars');
-        });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('nav') && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            menuIcon.classList.remove('fa-times');
-            menuIcon.classList.add('fa-bars');
-        }
-    });
 });

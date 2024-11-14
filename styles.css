@@ -42,23 +42,40 @@ body {
 }
 
 /* Navigation */
-header {
-    background-color: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: var(--background-dark);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
 }
 
 .logo {
@@ -68,26 +85,6 @@ nav {
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--primary-color);
 }
 
 /* Hero Section */
@@ -361,7 +358,6 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    margin-left: 10px;
 }
 
 .theme-toggle:hover {
@@ -373,16 +369,6 @@ nav ul li a:hover {
     outline: none;
 }
 
-/* Make sure the theme toggle is visible in mobile view */
-@media screen and (max-width: 768px) {
-    .theme-toggle {
-        margin-left: 0;
-        position: absolute;
-        right: 60px;
-        top: 15px;
-    }
-}
-
 /* Adjust the icon based on theme */
 :root[data-theme="light"] .theme-toggle .fa-moon {
     display: block;
@@ -392,11 +378,11 @@ nav ul li a:hover {
     display: none;
 }
 
-:root:not([data-theme="light"]) .theme-toggle .fa-moon {
+:root[data-theme="dark"] .theme-toggle .fa-moon {
     display: none;
 }
 
-:root:not([data-theme="light"]) .theme-toggle .fa-sun {
+:root[data-theme="dark"] .theme-toggle .fa-sun {
     display: block;
 }
 
@@ -441,43 +427,6 @@ html {
     .container {
         width: 90%;
         padding: 30px 0;
-    }
-
-    /* Navigation */
-    nav {
-        padding: 15px 20px;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    nav ul {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: var(--card-background);
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        transform: translateY(-150%);
-        transition: transform 0.3s ease;
-        border-bottom: 1px solid rgba(124, 58, 237, 0.2);
-    }
-
-    nav ul.active {
-        transform: translateY(0);
-    }
-
-    .mobile-menu-btn {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--text-primary);
-        font-size: 1.5rem;
-        cursor: pointer;
     }
 
     /* Hero Section */
