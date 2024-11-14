@@ -48,25 +48,45 @@ document.addEventListener('DOMContentLoaded', () => {
     // Contact form submission handler
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Basic form validation
-            const name = this.querySelector('input[name="name"]').value;
-            const email = this.querySelector('input[name="email"]').value;
-            const message = this.querySelector('textarea[name="message"]').value;
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
 
-            if (!name || !email || !message) {
-                alert('Please fill out all fields');
-                return;
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: new FormData(this),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Success message
+                    this.reset();
+                    submitButton.textContent = 'Message Sent!';
+                    setTimeout(() => {
+                        submitButton.textContent = originalButtonText;
+                        submitButton.disabled = false;
+                    }, 3000);
+                } else {
+                    // Error message
+                    throw new Error(data.error || 'Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                submitButton.textContent = 'Error! Try Again';
+                setTimeout(() => {
+                    submitButton.textContent = originalButtonText;
+                    submitButton.disabled = false;
+                }, 3000);
             }
-
-            // In a real-world scenario, you would send this data to a backend service
-            // For now, we'll just show a success message
-            alert('Thank you for your message, ' + name + '! I will get back to you soon.');
-            
-            // Reset form
-            this.reset();
         });
     }
 
