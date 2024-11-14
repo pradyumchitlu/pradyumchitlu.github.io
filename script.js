@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Scroll Animation
+    const scrollElements = document.querySelectorAll('.scroll-animation');
+    
+    const elementInView = (el, percentageScroll = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= 
+            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll/100))
+        );
+    };
+    
+    const displayScrollElement = (element) => {
+        element.classList.add('active');
+    };
+    
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 90)) {
+                displayScrollElement(el);
+            }
+        })
+    }
+    
+    // Add event listener for scroll
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+    
+    // Trigger once on load for elements already in view
+    handleScrollAnimation();
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

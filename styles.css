@@ -398,6 +398,32 @@ footer {
     border-top: 1px solid rgba(124, 58, 237, 0.2);
 }
 
+/* Scroll Animations */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-animation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay cascade effect for multiple elements */
+.scroll-animation:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.scroll-animation:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .about-content {
