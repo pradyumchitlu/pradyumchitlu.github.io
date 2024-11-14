@@ -361,6 +361,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    margin-left: 10px;
 }
 
 .theme-toggle:hover {
@@ -370,6 +371,16 @@ nav ul li a:hover {
 
 .theme-toggle:focus {
     outline: none;
+}
+
+/* Make sure the theme toggle is visible in mobile view */
+@media screen and (max-width: 768px) {
+    .theme-toggle {
+        margin-left: 0;
+        position: absolute;
+        right: 60px;
+        top: 15px;
+    }
 }
 
 /* Adjust the icon based on theme */
