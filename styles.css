@@ -426,29 +426,136 @@ html {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .about-text {
-        margin-right: 0;
-        margin-bottom: 30px;
+    /* Container */
+    .container {
+        width: 90%;
+        padding: 30px 0;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
+    /* Navigation */
+    nav {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
     }
 
     nav ul {
-        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--card-background);
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+    }
+
+    nav ul.active {
+        transform: translateY(0);
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text-primary);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 0 50px;
+        height: auto;
+        min-height: 100vh;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin: 20px 0;
     }
 
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .skills ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Projects Section */
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    /* Contact Section */
+    .contact form {
+        padding: 0 20px;
+    }
+
+    .contact input,
+    .contact textarea {
+        font-size: 16px; /* Prevents zoom on mobile */
+    }
+
+    /* Section Headings */
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skills ul {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-links a {
+        font-size: 1.5rem;
     }
 }
 
