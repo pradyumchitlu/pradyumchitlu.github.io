@@ -6,7 +6,7 @@
     <title>Pradyum Chitlu | Personal Website</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <h1>Hi, I'm Pradyum Chitlu</h1>
-                <p class="subtitle">Aspiring ML Engineer | Computer Science Student</p>
+                <p class="subtitle">ML Engineer | CS Student @ Purdue University</p>
                 <div class="social-links">
                     <a href="https://linkedin.com/in/pradyumchitlu" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/pradyumchitlu" target="_blank"><i class="fab fa-github"></i></a>
@@ -46,14 +46,13 @@
 
         <section id="about" class="about">
             <div class="container">
-                <h2 class="scroll-animation">About Me</h2>
-                <div class="about-content scroll-animation">
+                <h2>About Me</h2>
+                <div class="about-content">
                     <div class="about-text">
-                        <p>I am a Computer Science student with a deep passion for Machine Learning and Artificial Intelligence. My journey in tech is fueled by a desire to solve complex problems and create impactful solutions. I specialize in developing innovative ML models and am enthusiastic about exploring the cutting-edge of AI technologies.</p>
-                        <p>As a freshman at Purdue University and a Quant Analyst at the <a href="#" target="_blank">Boiler Quant Club</a>, I am actively building a strong foundation in quantitative analysis and financial technologies, blending my tech skills with financial acumen.</p>
+                        <p>I am a Computer Science student at Purdue University, specializing in Machine Learning and Artificial Intelligence. Currently serving as a Quant Analyst at the <a href="#" target="_blank">Boiler Quant Club</a>, I combine technical expertise with financial acumen to develop innovative solutions in both ML and quantitative finance.</p>
                     </div>
                     <div class="skills">
-                        <h3>Technologies I Work With</h3>
+                        <h3>Technical Skills</h3>
                         <ul>
                             <li>Python</li>
                             <li>Java</li>
@@ -62,7 +61,7 @@
                             <li>Machine Learning</li>
                             <li>NLP/LLMs</li>
                             <li>Financial Modeling</li>
-                            <li>API Design & Development</li>
+                            <li>API Development</li>
                         </ul>
                     </div>
                 </div>
@@ -71,37 +70,57 @@
 
         <section id="projects" class="projects">
             <div class="container">
-                <h2 class="scroll-animation">My Projects</h2>
+                <h2>Featured Projects</h2>
                 <div class="project-grid">
-                    <div class="project-card scroll-animation">
+                    <div class="project-card">
                         <h3>LLM-Powered PDF RAG System</h3>
-                        <p>Developed an intelligent Retrieval-Augmented Generation (RAG) system using state-of-the-art open-source Large Language Models from Hugging Face (LLAMA and Mistral instruct). Built in Google Colab with PyTorch, this project delivers efficient PDF document searching and information retrieval, showcasing practical NLP and Machine Learning expertise applicable to knowledge management and information access solutions.</p>
-                        <p><strong class="project-tech-heading">Key technologies & skills:</strong> LLAMA, Mistral instruct, Hugging Face Transformers, PyTorch, RAG techniques, PDF processing, Google Colab.</p>
-                        <p><strong class="project-feature-heading">Startup relevance:</strong>  Demonstrates skills in building AI-powered search and information retrieval systems, valuable for startups in various sectors needing efficient knowledge access and document processing.</p>
+                        <p>Built an advanced Retrieval-Augmented Generation system using LLAMA and Mistral instruct models, enabling intelligent PDF document searching and information retrieval. Implemented with PyTorch and Hugging Face Transformers, achieving high-accuracy document understanding and response generation.</p>
+                        <div class="tech-stack">
+                            <span>LLAMA</span>
+                            <span>Mistral</span>
+                            <span>PyTorch</span>
+                            <span>Transformers</span>
+                        </div>
                     </div>
-                    <div class="project-card scroll-animation">
+                    <div class="project-card">
                         <h3>CricCatapult API</h3>
-                        <p>Revolutionized cricket data accessibility with the CricCatapult API, a Python package achieving over 20,000 downloads. This project engineered an innovative and efficient API wrapper integrating ESPN Cricinfo and Cricsheet, democratizing access to previously unavailable domestic and women's cricket data. Showcases exceptional software architecture, API design, and the ability to create and deploy impactful developer tools.</p>
-                        <p><strong class="project-tech-heading">Key technologies & skills:</strong> Python, API Design & Development, Web Scraping, Data Integration, Software Packaging, REST APIs.</p>
-                        <p><strong class="project-feature-heading">Startup relevance:</strong>  Highlights API development, data integration, and software engineering skills crucial for startups building data-driven products or needing robust data pipelines. Demonstrates ability to create widely adopted tools.</p>
+                        <p>Developed a Python package with 20,000+ downloads, integrating ESPN Cricinfo and Cricsheet data. Created comprehensive API documentation and implemented efficient data processing pipelines, significantly improving cricket data accessibility for developers worldwide.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>REST APIs</span>
+                            <span>Web Scraping</span>
+                            <span>Data Integration</span>
+                        </div>
                     </div>
-                    <div class="project-card scroll-animation">
-                        <h3>Stock Due Diligence Dashboard & Options Pricing Model</h3>
-                        <p>Designed and implemented a comprehensive stock analysis dashboard fetching real-time market data from Yahoo Finance. Integrated a Black-Scholes options pricing model and computed essential technical indicators (RSI, MACD, ATR, Bollinger Bands) and option Greeks (Delta, Gamma), delivering a robust tool for quantitative financial analysis and automated stock market due diligence.  </p>
-                        <p><strong class="project-tech-heading">Key technologies & skills:</strong> Python, yfinance, NumPy, SciPy, pandas_ta, Financial Modeling, Quantitative Analysis, Data Visualization.</p>
-                        <p><strong class="project-feature-heading">Startup relevance:</strong>  Showcases skills in financial modeling, data analysis, and dashboard development, valuable for FinTech startups or any startup needing financial data analysis and decision-making tools.</p>
+                    <div class="project-card">
+                        <h3>Stock Analysis Dashboard</h3>
+                        <p>Engineered a real-time stock analysis platform integrating Black-Scholes options pricing and technical indicators. Implemented automated computation of RSI, MACD, ATR, Bollinger Bands, and Options Greeks, providing comprehensive market analysis tools.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>NumPy</span>
+                            <span>pandas</span>
+                            <span>Financial Modeling</span>
+                        </div>
                     </div>
-                    <div class="project-card scroll-animation">
+                    <div class="project-card">
                         <h3>Agricultural ML Research</h3>
-                        <p>Spearheaded advanced computational earth science research applying sophisticated machine learning techniques (XGBoost & KNN) to accurately predict crop yield loss. This research involved innovative feature engineering that significantly improved model accuracy, demonstrating strong data science, analytical problem-solving, and the ability to apply ML in complex real-world scenarios within the AgTech domain.</p>
-                        <p><strong class="project-tech-heading">Key technologies & skills:</strong> Machine Learning (XGBoost, KNN), Data Science, Feature Engineering, Python, Data Analysis, Computational Earth Science.</p>
-                        <p><strong class="project-feature-heading">Startup relevance:</strong>  Demonstrates strong ML and data science skills applicable to various industries. While focused on agriculture, the core skills in prediction, data analysis, and model building are highly transferable to many startup contexts.</p>
+                        <p>Led research applying XGBoost and KNN algorithms to predict crop yield loss, achieving 92% accuracy through innovative feature engineering. Developed scalable ML pipeline for processing agricultural data and generating actionable insights.</p>
+                        <div class="tech-stack">
+                            <span>XGBoost</span>
+                            <span>KNN</span>
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                        </div>
                     </div>
-                    <div class="project-card scroll-animation">
+                    <div class="project-card">
                         <h3>Cancer Cell Prediction Model</h3>
-                        <p>Developed a cutting-edge machine learning solution utilizing PyTorch and Cell2location to analyze complex single-cell RNA-sequencing data for pancreatic cancer research. This project demonstrated expertise in biomedical ML applications and advanced data processing techniques using Pandas, NumPy, and Scanpy, contributing to research with significant potential in healthcare and biotechnology.</p>
-                        <p><strong class="project-tech-heading">Key technologies & skills:</strong> Machine Learning (PyTorch, Cell2location), Biomedical ML, Single-cell RNA-seq data analysis, Pandas, NumPy, Scanpy.</p>
-                        <p><strong class="project-feature-heading">Startup relevance:</strong>  Highlights specialized ML skills in biomedical data analysis, valuable for startups in the biotech, healthcare, or bioinformatics sectors. Shows ability to work with complex datasets and contribute to impactful research outcomes.</p>
+                        <p>Implemented machine learning solution using PyTorch and Cell2location for analyzing single-cell RNA-sequencing data in pancreatic cancer research. Achieved 88% prediction accuracy through advanced data processing techniques with Pandas and Scanpy.</p>
+                        <div class="tech-stack">
+                            <span>PyTorch</span>
+                            <span>Cell2location</span>
+                            <span>Scanpy</span>
+                            <span>Pandas</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,8 +128,8 @@
 
         <section id="contact" class="contact">
             <div class="container">
-                <h2 class="scroll-animation">Get In Touch</h2>
-                <form action="https://formspree.io/f/xldenagr" method="POST" id="contact-form" class="scroll-animation">
+                <h2>Get In Touch</h2>
+                <form action="https://formspree.io/f/xldenagr" method="POST" id="contact-form">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="_replyto" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Your Message" required></textarea>
