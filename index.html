@@ -3,137 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pradyum Chitlu | Personal Website</title>
+    <title>Pradyum Chitlu | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Merriweather:wght@700&family=Fira+Mono:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Pradyum Chitlu</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><button id="theme-toggle" aria-label="Toggle Theme" class="theme-toggle"><i class="fas fa-moon"></i></button></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home" style="background-image: linear-gradient(to bottom, #2f4f7f, #2f4f7f);">
+        <div class="overlay"></div>
+        <img src="assets/profile.jpg" alt="Profile Photo" class="profile-img">
+        <h1>Pradyum Chitlu</h1>
+        <p class="subtitle">ML Engineer | CS Student @ Purdue University</p>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <div class="profile-container">
+        <section id="about" class="animated-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I'm a Data Science & Computer Science student at Purdue University, specializing in Machine Intelligence and Software Engineering. Passionate about quantitative finance and investing, I develop algorithmic trading strategies and backtesting frameworks to optimize portfolio performance. I explore the transformative potential of large language models and AI to generate financial insights, automate investment workflows, and drive innovation in quantitative research.</p>
+            </div>
+        </section>
+<!-- SVG Divider -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:60px;"><path d="M0 40 Q 360 80 720 40 Q 1080 0 1440 40 V80 H0 V40 Z" fill="var(--background)"/></svg>
+</div>
+
+        <section id="experience" class="animated-section">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="experience-item">
+                        <h3>Quantitative Analyst</h3>
+                        <span>Boiler Quant Finance Group | Jan 2025 – Present</span>
+                        <p>Led the development of a React Native front-end and integrated the back-end API calls from a custom transformer-based AI back-end for the “Ports” social investing startup application.</p>
+                        <p>Designed and implemented quantitative trading strategies, backtesting sophisticated algorithms to optimize portfolio performance and risk management.</p>
                     </div>
-                <h1>Hi, I'm Pradyum Chitlu</h1>
-                <p class="subtitle">ML Engineer | CS Student @ Purdue University</p>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/pradyumchitlu" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/pradyumchitlu" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:pradyumchitlu@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <div class="experience-item">
+                        <h3>Computational Biology Researcher</h3>
+                        <span>Carnegie Mellon University | July 2023</span>
+                        <p>Developed high-performance Go algorithms for metagenomic analysis, including UPGMA tree construction, heuristic optimization, and efficient string processing for large DNA datasets.</p>
+                        <p>Engineered end-to-end data workflows to analyze large-scale sequencing data, quantifying microbial diversity and modeling evolutionary relationships using advanced statistical methods.</p>
+                        <p>Explored classic algorithms like the Sieve of Eratosthenes for prime number generation, dynamic programming for sequence alignment, and implemented custom data structures to accelerate bioinformatics analysis.</p>
+                    </div>
                 </div>
             </div>
         </section>
+<!-- SVG Divider -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:60px;"><path d="M0 40 Q 360 80 720 40 Q 1080 0 1440 40 V80 H0 V40 Z" fill="var(--background)"/></svg>
+</div>
 
-        <section id="about" class="about">
+        <section id="projects" class="animated-section">
             <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I am a Computer Science student at Purdue University, specializing in Machine Learning and Artificial Intelligence. Currently serving as a Quant Analyst at the Boiler Quant Club, I combine technical expertise with financial acumen to develop innovative solutions in both ML and quantitative finance.</p>
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="card">
+                        <h3>ArisTalkle – AI Debate Platform</h3>
+                        <p>Built a full-stack debate platform using Flask and Next.js with MongoDB. Integrated Google Gemini for NLP analysis, Sonic AI for text-to-speech, and Sync.so for video synchronization to create immersive AI-driven debates.</p>
                     </div>
-                    <div class="skills">
-                        <h3>Technical Skills</h3>
+                    <div class="card">
+                        <h3>LLM-Powered PDF RAG System</h3>
+                        <p>Developed a document intelligence pipeline using PyTorch and Hugging Face with LLAMA and Mistral instruct models. Implemented custom retrieval-augmented generation to enable high-accuracy querying of large PDF corpora.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Fzero – Trading Strategy Platform</h3>
+<p>Engineered a V0-inspired tool for trading strategies using Gemini API, Python backtesting library, and Yahoo Finance data. Designed a plugin architecture enabling dynamic strategy deployment and performance analytics.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Aladdin – Ensemble Investing Engine</h3>
+                        <p>Built an equity prediction system leveraging 216 technical indicators and an ensemble of XGBoost, neural networks, and LSTMs. Integrated Alpaca live market data with Python for real‑time signal generation and backtesting.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Climate Impact ML Analysis</h3>
+                        <p>Applied XGBoost and KNN to predict crop yield loss, utilizing SHAP for feature importance analysis. Delivered actionable insights by integrating climate and geospatial datasets; presented at AGU conference.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CricCatapult – Cricket Data API</h3>
+                        <p>Designed a Python wrapper for ESPN Cricinfo and Cricsheet, offering data in CSV, JSON, and YAML. Achieved 20k+ PyPI downloads and provided comprehensive documentation and analytics pipelines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- SVG Divider -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:60px;"><path d="M0 40 Q 360 80 720 40 Q 1080 0 1440 40 V80 H0 V40 Z" fill="var(--background)"/></svg>
+</div>
+
+        <section id="skills" class="animated-section">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
                         <ul>
                             <li>Python</li>
                             <li>Java</li>
+                            <li>Go</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>R</li>
+                            <li>SQL</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Libraries & Frameworks</h3>
+                        <ul>
+                            <li>Next.js</li>
+                            <li>React</li>
+                            <li>React Native</li>
                             <li>PyTorch</li>
                             <li>TensorFlow</li>
-                            <li>Machine Learning</li>
-                            <li>NLP/LLMs</li>
-                            <li>Financial Modeling</li>
-                            <li>API Development</li>
+                            <li>Hugging Face Transformers</li>
+                            <li>Flask</li>
+                            <li>Agile Methodology</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>Docker</li>
+                            <li>Cursor</li>
+                            <li>Windsurf</li>
+                            <li>Kubernetes</li>
+                            <li>Alpaca API</li>
+                            <li>Backtrader</li>
+                            <li>Pinescript Backtesting</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
+<!-- SVG Divider -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:60px;"><path d="M0 40 Q 360 80 720 40 Q 1080 0 1440 40 V80 H0 V40 Z" fill="var(--background)"/></svg>
+</div>
 
-        <section id="projects" class="projects">
+        <section id="achievements" class="animated-section">
             <div class="container">
-                <h2>Featured Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>LLM-Powered PDF RAG System</h3>
-                        <p>Built an advanced Retrieval-Augmented Generation system using LLAMA and Mistral instruct models, enabling intelligent PDF document searching and information retrieval. Implemented with PyTorch and Hugging Face Transformers, achieving high-accuracy document understanding and response generation.</p>
-                        <div class="tech-stack">
-                            <span>LLAMA</span>
-                            <span>Mistral</span>
-                            <span>PyTorch</span>
-                            <span>Transformers</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>CricCatapult API</h3>
-                        <p>Developed a Python package with 20,000+ downloads, integrating ESPN Cricinfo and Cricsheet data. Created comprehensive API documentation and implemented efficient data processing pipelines, significantly improving cricket data accessibility for developers worldwide.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>REST APIs</span>
-                            <span>Web Scraping</span>
-                            <span>Data Integration</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>Stock Analysis Dashboard</h3>
-                        <p>Engineered a real-time stock analysis platform integrating Black-Scholes options pricing and technical indicators. Implemented automated computation of RSI, MACD, ATR, Bollinger Bands, and Options Greeks, providing comprehensive market analysis tools.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>NumPy</span>
-                            <span>pandas</span>
-                            <span>Financial Modeling</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>Agricultural ML Research</h3>
-                        <p>Led research applying XGBoost and KNN algorithms to predict crop yield loss, achieving 92% accuracy through innovative feature engineering. Developed scalable ML pipeline for processing agricultural data and generating actionable insights.</p>
-                        <div class="tech-stack">
-                            <span>XGBoost</span>
-                            <span>KNN</span>
-                            <span>Python</span>
-                            <span>Scikit-learn</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>Cancer Cell Prediction Model</h3>
-                        <p>Implemented machine learning solution using PyTorch and Cell2location for analyzing single-cell RNA-sequencing data in pancreatic cancer research. Achieved 88% prediction accuracy through advanced data processing techniques with Pandas and Scanpy.</p>
-                        <div class="tech-stack">
-                            <span>PyTorch</span>
-                            <span>Cell2location</span>
-                            <span>Scanpy</span>
-                            <span>Pandas</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <form action="https://formspree.io/f/xldenagr" method="POST" id="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="_replyto" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <input type="hidden" name="_subject" value="New contact form submission">
-                    <input type="text" name="_gotcha" style="display:none">
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+                <h2>Achievements</h2>
+                <ul class="achievements-list">
+                  <li>Won Most Likely to Become a Business Award at BoilerMake Hackathon</li>
+                  <li>Invited to Present Business Idea at Purdue's Startup Expo as a Freshman</li>
+                  <li>Selected to Present Sports Analytics paper at Carnegie Mellon Sports Analytics Conference (2022)</li>
+                  <li>Selected for Poster Presentation at American Geophysical Union (2023)</li>
+                  <li>Top 1% Prompt Engineer (in my opinion)</li>
+                  <li>2000 Elo (Chess.com Peak Rating)</li>
+                  <li>1590 SAT Score</li>
+              </ul>
             </div>
         </section>
     </main>
