@@ -3,6 +3,8 @@ type Project = {
   desc: string;
   href?: string;
   linkText?: string;
+  bullets?: string[];
+  badge?: string;
 };
 
 const projects: Project[] = [
@@ -14,11 +16,16 @@ const projects: Project[] = [
     linkText: "Project link",
   },
   {
-    title: "Cloud Salary Insights & ML Dashboard",
-    desc:
-      "Containerized REST services for data access and model inference; 99.9% uptime and single‑digit monthly costs via autoscaling and cache‑aware ETL.",
+    title: "Salary Prediction Platform (Product)",
+    desc: "Real‑time salary predictions served via REST. Compensation clarity in a tight tech‑hiring market.",
+    bullets: [
+      "Ops: GCP, autoscaling; ~99.9% uptime; processes 15k+ records; ~95% infra cost reduction.",
+      "Links: Live App + ML Dashboard.",
+      "Outcome: reliable, everyday tool → passes the toothbrush test.",
+    ],
     href: "https://ai-jobs-dashboard-bdbs2vtlca-uc.a.run.app/",
-    linkText: "Live app",
+    linkText: "Live App",
+    badge: "Toothbrush Test",
   },
   {
     title: "NBA Analytics Toolkit & Playoff Model",
@@ -51,10 +58,16 @@ const projects: Project[] = [
   },
   {
     title: "Interpretable ML for Climate Impact",
-    desc:
-      "XGBoost with SHAP explainability on NOAA/USDA signals; delivered dashboards and reports.",
+    desc: "Long‑run climate + ag features to highlight farmer risk.",
+    bullets: [
+      "Data: NOAA 1895–2023; USDA/agronomic features (pesticide usage, soil pH, precipitation).",
+      "Methods: time‑series + XGBoost with SHAP; spatiotemporal risk mapping.",
+      "Venue: Presented at AGU Fall Meeting 2023 (San Francisco).",
+      "Outcome: AI for agriculture that explains ‘why,’ not just ‘what.’",
+    ],
     href: "https://ui.adsabs.harvard.edu/abs/2023AGUFMED41C0891U/abstract",
     linkText: "Abstract",
+    badge: "Hassabis Vision",
   },
   {
     title: "CricCatapult – Cricket Data API",
@@ -80,6 +93,18 @@ export default function Projects() {
             >
               <h3 className="text-xl font-semibold text-slate-100 mb-2">{p.title}</h3>
               <p className="text-slate-300 text-sm">{p.desc}</p>
+              {p.badge && (
+                <span className="inline-block mt-2 text-xs bg-teal-500/20 text-teal-300 border border-teal-400/30 px-2 py-0.5 rounded">
+                  {p.badge}
+                </span>
+              )}
+              {p.bullets && (
+                <ul className="mt-2 list-disc list-inside text-slate-300 text-sm space-y-1">
+                  {p.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+              )}
               {p.href && (
                 <a
                   className="inline-block mt-3 text-indigo-300 underline underline-offset-4 hover:text-cyan-300"
