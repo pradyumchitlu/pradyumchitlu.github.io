@@ -69,7 +69,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-12">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-300 text-3xl font-semibold mb-8">
+        <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-300 text-3xl font-semibold mb-8">
           Projects
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

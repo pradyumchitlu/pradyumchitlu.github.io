@@ -41,7 +41,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-12 bg-gradient-to-b from-slate-800 to-slate-900">
       <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-300 text-3xl font-semibold mb-8">
+        <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-300 text-3xl font-semibold mb-8">
           Experience
         </h2>
         <div className="flex flex-col gap-8">

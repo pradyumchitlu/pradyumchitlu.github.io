@@ -1,20 +1,20 @@
 :root {
-    --primary-color: #3B82F6;
-    --secondary-color: #4F46E5;
-    --background: #0F172A;
-    --text-primary: #F8FAFC;
-    --text-secondary: #94A3B8;
-    --card-background: #1E293B;
-    --accent-color: #4F46E5;
+    --primary-color: #14b8a6; /* teal-500 */
+    --secondary-color: #06b6d4; /* cyan-500 */
+    --background: #062428;
+    --text-primary: #e6fffb;
+    --text-secondary: #94f2e6;
+    --card-background: #0b2f34;
+    --accent-color: #2dd4bf; /* teal-400 */
 }
 
 :root[data-theme="light"] {
-    --background: #FFFFFF;
-    --text-primary: #1E293B;
-    --text-secondary: #475569;
-    --card-background: #F8FAFC;
-    --accent-color: #2563EB;
-    --primary-color: #60A5FA;
+    --background: #e6fffb;
+    --text-primary: #083344;
+    --text-secondary: #115e59;
+    --card-background: #ccfbf1;
+    --accent-color: #0d9488;
+    --primary-color: #0ea5a4;
 }
 
 * {
@@ -86,7 +86,7 @@ nav .theme-toggle {
     width: 100%;
     height: 100%;
     background: var(--background) url('assets/purdue.jpg') center/cover no-repeat;
-    opacity: 0.3;
+    opacity: 0.25;
 }
 
 .hero .profile-img {
@@ -361,7 +361,7 @@ code, .code-accent {
 }
 
 .projects-grid .card:hover {
-    background: #2a2f43;
+    background: #0f3c43;
     transform: translateY(-5px);
 }
 

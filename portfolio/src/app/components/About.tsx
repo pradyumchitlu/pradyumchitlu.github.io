@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section id="about" className="py-12 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-300 text-3xl font-semibold mb-4">
+        <h2 className="text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-300 text-3xl font-semibold mb-4">
           About Me
         </h2>
         <p className="text-slate-200/90">
