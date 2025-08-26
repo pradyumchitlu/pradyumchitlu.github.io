@@ -6,12 +6,12 @@ export default function About() {
           About Me
         </h2>
         <p className="text-slate-200/90">
-          I&#39;m a Purdue University student double‑majoring in Data Science and Computer Science,
-          focused on building internal web apps, clean APIs, and data/ML tools. I ship
-          containerized services with CI/CD, observability, and tests, and turn
-          play‑by‑play and multi‑source datasets into usable interfaces and models for
-          real users. I emphasize clean code, documentation, and confidentiality, and I&#39;m
-          comfortable owning work from design → implementation → review → deploy.
+          I build AI‑driven products and data tools that people actually use. My north star is
+          Demis Hassabis&#39; vision—systems that learn, generalize, and make life better—applied to
+          practical domains like compensation clarity and agriculture. My product bar follows
+          Larry Page&#39;s toothbrush test: simple, habit‑forming tools that reduce friction and save time.
+          I ship containerized services with CI/CD, observability, and tests, and I&#39;m comfortable
+          owning work from design → implementation → review → deploy.
         </p>
       </div>
     </section>
