@@ -13,6 +13,9 @@ export default function About() {
           I ship containerized services with CI/CD, observability, and tests, and I&#39;m comfortable
           owning work from design → implementation → review → deploy.
         </p>
+        <blockquote className="mt-4 text-slate-300 italic border-l-4 border-teal-400/40 pl-4">
+          “Is this something you will use once or twice a day, and does it make your life better?” — Larry Page
+        </blockquote>
       </div>
     </section>
   );
