@@ -14,8 +14,10 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><button id="theme-toggle" aria-label="Toggle Theme" class="theme-toggle"><i class="fas fa-moon"></i></button></li>
         </ul>
     </nav>
@@ -24,14 +26,36 @@
         <div class="overlay"></div>
         <img src="assets/profile.jpg" alt="Profile Photo" class="profile-img">
         <h1>Pradyum Chitlu</h1>
-        <p class="subtitle">ML Engineer | CS Student @ Purdue University</p>
+        <p class="subtitle">Backend & Data Tools | CS & Data Science @ Purdue</p>
+        <div class="social-links">
+            <a href="mailto:pchitlu@purdue.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/pradyum-chitlu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/pradyumchitlu" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
     </header>
 
     <main>
         <section id="about" class="animated-section">
             <div class="container">
                 <h2>About Me</h2>
-                <p>I'm a Data Science & Computer Science student at Purdue University, specializing in Machine Intelligence and Software Engineering. Passionate about quantitative finance and investing, I develop algorithmic trading strategies and backtesting frameworks to optimize portfolio performance. I explore the transformative potential of large language models and AI to generate financial insights, automate investment workflows, and drive innovation in quantitative research.</p>
+                <p>I'm a Purdue University student studying Data Science and Computer Science, focused on building internal web apps, clean APIs, and data/ML tools. I ship containerized services with CI/CD, observability, and tests, and turn play-by-play and multi‑source datasets into usable interfaces and models for real users.</p>
+                <p>I emphasize clean code, documentation, and confidentiality, and I'm comfortable owning work from design → implementation → review → deploy.</p>
+            </div>
+        </section>
+<!-- SVG Divider -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:60px;"><path d="M0 40 Q 360 80 720 40 Q 1080 0 1440 40 V80 H0 V40 Z" fill="var(--background)"/></svg>
+</div>
+
+        <section id="education" class="animated-section">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education">
+                    <div class="education-item">
+                        <h3>Purdue University</h3>
+                        <span>B.S. in Data Science & Computer Science (Double Major)</span>
+                    </div>
+                </div>
             </div>
         </section>
 <!-- SVG Divider -->
@@ -44,17 +68,13 @@
                 <h2>Experience</h2>
                 <div class="timeline">
                     <div class="experience-item">
-                        <h3>Quantitative Analyst</h3>
-                        <span>Boiler Quant Finance Group | Jan 2025 – Present</span>
-                        <p>Led the development of a React Native front-end and integrated the back-end API calls from a custom transformer-based AI back-end for the “Ports” social investing startup application.</p>
-                        <p>Designed and implemented quantitative trading strategies, backtesting sophisticated algorithms to optimize portfolio performance and risk management.</p>
+                        <h3>Full-Stack Developer & Founding Engineer</h3>
                     </div>
                     <div class="experience-item">
-                        <h3>Computational Biology Researcher</h3>
-                        <span>Carnegie Mellon University | July 2023</span>
-                        <p>Developed high-performance Go algorithms for metagenomic analysis, including UPGMA tree construction, heuristic optimization, and efficient string processing for large DNA datasets.</p>
-                        <p>Engineered end-to-end data workflows to analyze large-scale sequencing data, quantifying microbial diversity and modeling evolutionary relationships using advanced statistical methods.</p>
-                        <p>Explored classic algorithms like the Sieve of Eratosthenes for prime number generation, dynamic programming for sequence alignment, and implemented custom data structures to accelerate bioinformatics analysis.</p>
+                        <h3>Quantitative Analyst</h3>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Co-President, MSJ Sports Analytics Club</h3>
                     </div>
                 </div>
             </div>
@@ -70,27 +90,39 @@
                 <div class="projects-grid">
                     <div class="card">
                         <h3>ArisTalkle – AI Debate Platform</h3>
-                        <p>Built a full-stack debate platform using Flask and Next.js with MongoDB. Integrated Google Gemini for NLP analysis, Sonic AI for text-to-speech, and Sync.so for video synchronization to create immersive AI-driven debates.</p>
+                        <p>Backend in Flask + MongoDB orchestrating multi-API pipelines (LLM, TTS, video sync) with retries/backoff. <a href="https://devpost.com/software/aristalkle" target="_blank" rel="noopener">Project link</a></p>
+                    </div>
+                    <div class="card">
+                        <h3>Cloud Salary Insights & ML Dashboard</h3>
+                        <p>Containerized REST services for data access and model inference; 99.9% uptime and single‑digit monthly costs via autoscaling and cache‑aware ETL. <a href="https://ai-jobs-dashboard-bdbs2vtlca-uc.a.run.app/" target="_blank" rel="noopener">Live app</a></p>
+                    </div>
+                    <div class="card">
+                        <h3>NBA Analytics Toolkit & Playoff Model</h3>
+                        <p>Internal web tooling (Flask/Streamlit) to explore team‑season features and simulate series matchups; REST endpoints for inference and data access. <a href="https://github.com/pradyumchitlu/nba-analytics" target="_blank" rel="noopener">GitHub</a></p>
+                    </div>
+                    <div class="card">
+                        <h3>Fantasy Football Analytics & Projections</h3>
+                        <p>Clean schema + ETL for weekly updates; Streamlit app for lineup queries and scenario tests; per‑position XGBoost with validation. <a href="https://github.com/pradyumchitlu/fantasy-football" target="_blank" rel="noopener">GitHub</a></p>
                     </div>
                     <div class="card">
                         <h3>LLM-Powered PDF RAG System</h3>
-                        <p>Developed a document intelligence pipeline using PyTorch and Hugging Face with LLAMA and Mistral instruct models. Implemented custom retrieval-augmented generation to enable high-accuracy querying of large PDF corpora.</p>
+                        <p>Document intelligence pipeline using PyTorch + HF models (LLAMA/Mistral) and custom retrieval‑augmented generation for large corpora.</p>
                     </div>
                     <div class="card">
                         <h3>Fzero – Trading Strategy Platform</h3>
-<p>Engineered a V0-inspired tool for trading strategies using Gemini API, Python backtesting library, and Yahoo Finance data. Designed a plugin architecture enabling dynamic strategy deployment and performance analytics.</p>
+                        <p>Plugin architecture for dynamic trading strategies; Gemini API, Yahoo Finance, and Python backtesting utilities for analytics.</p>
                     </div>
                     <div class="card">
                         <h3>Aladdin – Ensemble Investing Engine</h3>
-                        <p>Built an equity prediction system leveraging 216 technical indicators and an ensemble of XGBoost, neural networks, and LSTMs. Integrated Alpaca live market data with Python for real‑time signal generation and backtesting.</p>
+                        <p>216 technical indicators powering an ensemble of XGBoost, neural nets, and LSTMs; integrated Alpaca live data for real‑time signals.</p>
                     </div>
                     <div class="card">
-                        <h3>Climate Impact ML Analysis</h3>
-                        <p>Applied XGBoost and KNN to predict crop yield loss, utilizing SHAP for feature importance analysis. Delivered actionable insights by integrating climate and geospatial datasets; presented at AGU conference.</p>
+                        <h3>Interpretable ML for Climate Impact</h3>
+                        <p>XGBoost with SHAP explainability on NOAA/USDA signals; delivered dashboards and reports. <a href="https://ui.adsabs.harvard.edu/abs/2023AGUFMED41C0891U/abstract" target="_blank" rel="noopener">Abstract</a></p>
                     </div>
                     <div class="card">
                         <h3>CricCatapult – Cricket Data API</h3>
-                        <p>Designed a Python wrapper for ESPN Cricinfo and Cricsheet, offering data in CSV, JSON, and YAML. Achieved 20k+ PyPI downloads and provided comprehensive documentation and analytics pipelines.</p>
+                        <p>Python package for large‑scale ingestion/analysis (500K+ records) with Selenium scraping; 20K+ downloads and comprehensive docs. <a href="https://github.com/aadrijupadya/CricCatapult" target="_blank" rel="noopener">GitHub</a></p>
                     </div>
                 </div>
             </div>
@@ -109,38 +141,58 @@
                         <ul>
                             <li>Python</li>
                             <li>Java</li>
+                            <li>C / C++</li>
                             <li>Go</li>
-                            <li>C</li>
-                            <li>C++</li>
-                            <li>R</li>
+                            <li>JavaScript / TypeScript</li>
                             <li>SQL</li>
-                            <li>Tailwind CSS</li>
+                            <li>R</li>
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3>Libraries & Frameworks</h3>
+                        <h3>Backend & APIs</h3>
                         <ul>
-                            <li>Next.js</li>
+                            <li>REST, OAuth2, Webhooks</li>
+                            <li>Flask / FastAPI, Node / Express</li>
+                            <li>gRPC (basics), MVC patterns</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frontend & Apps</h3>
+                        <ul>
                             <li>React</li>
                             <li>React Native</li>
-                            <li>PyTorch</li>
-                            <li>TensorFlow</li>
-                            <li>Hugging Face Transformers</li>
-                            <li>Flask</li>
-                            <li>Agile Methodology</li>
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3>Tools & Technologies</h3>
+                        <h3>Data & ML</h3>
                         <ul>
-                            <li>Git & GitHub</li>
-                            <li>Docker</li>
-                            <li>Cursor</li>
-                            <li>Windsurf</li>
-                            <li>Kubernetes</li>
-                            <li>Alpaca API</li>
-                            <li>Backtrader</li>
-                            <li>Pinescript Backtesting</li>
+                            <li>Pandas, NumPy, Jupyter</li>
+                            <li>scikit‑learn, XGBoost, SHAP</li>
+                            <li>StatsModels, evaluation/serving</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <ul>
+                            <li>PostgreSQL, SQLite</li>
+                            <li>MongoDB</li>
+                            <li>Schema design, ETL, dbt (basics)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & Infra</h3>
+                        <ul>
+                            <li>Docker, Kubernetes</li>
+                            <li>GitHub Actions CI/CD</li>
+                            <li>Linux, logging/monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Practices</h3>
+                        <ul>
+                            <li>Code reviews, design docs</li>
+                            <li>Unit / integration testing</li>
+                            <li>Performance profiling, Agile/Scrum</li>
                         </ul>
                     </div>
                 </div>

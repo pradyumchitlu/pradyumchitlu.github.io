@@ -52,6 +52,12 @@ nav a {
     font-weight: 500;
 }
 
+nav a:hover,
+nav a:focus {
+    outline: none;
+    text-decoration: underline;
+}
+
 nav a:hover {
     color: var(--accent-color);
 }
@@ -111,7 +117,32 @@ nav .theme-toggle {
 }
 
 .hero .social-links {
-    display: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .social-links a {
+    color: var(--text-primary);
+    background: rgba(99,102,241,0.18);
+    border: 1px solid rgba(99,102,241,0.35);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.hero .social-links a:hover {
+    transform: translateY(-2px);
+    background: rgba(0,255,247,0.18);
+    box-shadow: 0 0 12px rgba(0,255,247,0.35);
 }
 
 /* Section Styles */
@@ -335,12 +366,25 @@ code, .code-accent {
 }
 
 .projects-grid .card h3 {
+    line-height: 1.2;
+}
+
+.projects-grid .card h3 {
     margin-bottom: 0.75rem;
 }
 
 .projects-grid .card p {
     color: var(--text-secondary);
     font-size: 0.95rem;
+}
+
+.projects-grid .card a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.projects-grid .card a:hover {
+    color: var(--accent-color);
 }
 
 /* Skills Grid */
@@ -362,6 +406,18 @@ code, .code-accent {
     padding: 0.5rem 1rem;
     border-radius: 4px;
     font-size: 0.9rem;
+}
+
+.education .education-item {
+    text-align: center;
+    background: var(--card-background);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(99,102,241,0.15);
+}
+
+.education .education-item h3 {
+    margin-bottom: 0.25rem;
 }
 
 /* Footer */
