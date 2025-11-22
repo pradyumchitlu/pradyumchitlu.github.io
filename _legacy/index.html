@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradyum Chitlu | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><button id="theme-toggle" aria-label="Toggle Theme" class="theme-toggle"><i
+                        class="fas fa-moon"></i></button></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="overlay"></div>
+        <img src="assets/profile.jpg" alt="Profile Photo" class="profile-img">
+        <h1>Pradyum Chitlu</h1>
+        <p class="subtitle">Software Engineer specializing in building and scaling cloud-native AI products from zero to
+            one</p>
+        <div class="social-links">
+            <a href="mailto:pchitlu@purdue.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/pradyum-chitlu" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/pradyumchitlu" target="_blank" rel="noopener" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section id="education" class="animated-section">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education">
+                    <div class="education-item">
+                        <h3>Purdue University</h3>
+                        <span class="date">Expected May 2028</span>
+                        <p><strong>B.S. in Computer Science (Machine Intelligence Track) & Data Science</strong></p>
+                        <p>GPA: 3.57/4.00</p>
+                        <p class="coursework"><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Linear
+                            Algebra, Multivariable Calculus, Statistics & Probability, Data Mining with R, Computer
+                            Science in Java, C, C++, Computer Architecture (ARM)</p>
+                        <p><strong>Standardized Testing:</strong> 1590/1600 SAT</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="animated-section">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>SQL</li>
+                            <li>R</li>
+                            <li>C++</li>
+                            <li>C</li>
+                            <li>Go</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Platforms</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Docker (Kubernetes)</li>
+                            <li>GCP (Cloud Run, BigQuery)</li>
+                            <li>MongoDB</li>
+                            <li>Redis</li>
+                            <li>Kafka</li>
+                            <li>Flask</li>
+                            <li>React Native</li>
+                            <li>CI/CD</li>
+                            <li>Cursor</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>AI/ML</h3>
+                        <ul>
+                            <li>Scikit-learn</li>
+                            <li>XGBoost</li>
+                            <li>PyTorch</li>
+                            <li>SHAP</li>
+                            <li>Prompt Engineering</li>
+                            <li>RAG</li>
+                            <li>LLM APIs (OpenAI)</li>
+                            <li>Kalshi API</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="animated-section">
+            <div class="container">
+                <h2>Products & Leadership</h2>
+                <div class="projects-grid">
+                    <div class="card">
+                        <h3>Labor Market Intelligence Platform</h3>
+                        <span class="tech-stack">GCP, BigQuery, Docker, SQL | Live App</span>
+                        <ul>
+                            <li>Architected and operate a live, serverless AI platform on Google Cloud, providing
+                                real-time salary analytics to users while maintaining 99.9% operational uptime.</li>
+                            <li>Engineered a 95% reduction in operational costs (from $50K+ to &lt;$10/month), designing
+                                a business model that was previously cost-prohibitive.</li>
+                            <li>Developed scalable data pipelines in BigQuery to ingest and process over 15,000 records,
+                                forming the core data engine of the platform.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>ArisTalkle – AI Debate Platform</h3>
+                        <span class="tech-stack">Flask, MongoDB, LLM APIs | Award-Winning</span>
+                        <ul>
+                            <li>Led product development from concept to award-winning prototype for an AI-driven debate
+                                platform, integrating multiple LLM and Text-to-Speech APIs.</li>
+                            <li>Achieved top recognition for commercial potential ("Most Likely to Become a Business")
+                                in a competition of over 200 teams.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>CricCatapult – Open-Source Package</h3>
+                        <span class="tech-stack">Python, Selenium, SQL | 20,000+ Downloads</span>
+                        <ul>
+                            <li>Engineered a popular Python toolkit for large-scale sports analytics, empowering a
+                                global user base to process over 500,000 cricket match records with ease.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="animated-section">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="timeline">
+                    <div class="experience-item">
+                        <h3>Ports (Fintech Startup)</h3>
+                        <span class="role">Full-Stack Developer</span>
+                        <span class="date">Feb 2025 – Aug 2025 | West Lafayette, IN</span>
+                        <ul>
+                            <li>Architected a modular mobile application from the ground up using React Native, creating
+                                a scalable foundation that accelerated the feature development roadmap by 25%.</li>
+                            <li>Engineered a robust Java backend with REST APIs, implementing system-wide logging and
+                                health checks to ensure high reliability for a growing user base.</li>
+                            <li>Engineered an offline-first data system that eliminated connectivity-related failures
+                                and improved app responsiveness.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Purdue Boiler Quant Finance Group</h3>
+                        <span class="role">Team Lead & Quantitative Analyst</span>
+                        <span class="date">Jan 2025 – Present | West Lafayette, IN</span>
+                        <ul>
+                            <li>Clinched 1st place out of 30+ students in a trading competition, outperforming interns
+                                from elite firms like Akuna Capital, TMG, and Susquehanna.</li>
+                            <li>Leading a team project to develop novel trading strategies for emerging prediction
+                                markets, using the Kalshi API and other alternative datasets.</li>
+                            <li>Directing the project lifecycle: setting deliverables, managing timelines, and applying
+                                advanced ML and statistical models to find alpha.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="animated-section">
+            <div class="container">
+                <h2>Research & Presentations</h2>
+                <div class="projects-grid">
+                    <div class="card">
+                        <h3>Interpretable ML for Climate-Driven Crop Yield Risk</h3>
+                        <span class="tech-stack">Published at AGU Fall Meeting 2023</span>
+                        <ul>
+                            <li>Pioneered a climate risk model by blending vast datasets (1895–2023) from NOAA and USDA
+                                to predict agricultural outcomes.</li>
+                            <li>Applied advanced XGBoost and SHAP techniques to forecast crop yields and explain the
+                                "why" behind predictions.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Computational Biology Research</h3>
+                        <span class="tech-stack">Carnegie Mellon University Pre-College Program</span>
+                        <ul>
+                            <li>Selected for a competitive research program focused on the intersection of AI and
+                                biology.</li>
+                            <li>Developed Python algorithms to assemble microbial genomes from raw DNA sequences and
+                                used machine learning to identify bacterial genomes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership" class="animated-section">
+            <div class="container">
+                <h2>Leadership & Extracurriculars</h2>
+                <ul class="achievements-list">
+                    <li><strong>President, High School Sports Analytics Club:</strong> Organized and directed a
+                        nationwide sports analytics hackathon for high school students.</li>
+                    <li><strong>Invited Speaker:</strong> Accepted to present new research at the 2022 Carnegie Mellon
+                        Sports Analytics Conference.</li>
+                    <li><strong>Varsity Athlete:</strong> State-level competitor in Track & Field (CIF North Coast
+                        Section Meet of Champions) and accomplished basketball player.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- SVG Divider -->
+        <div class="section-divider">
+            <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                style="display:block;width:100%;height:60px;">
+                <path d="M0 40 Q 360 80 720 40 Q 1080 0 1440 40 V80 H0 V40 Z" fill="var(--background)" />
+            </svg>
+        </div>
+
+        <section id="contact" class="animated-section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pradyum Chitlu. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

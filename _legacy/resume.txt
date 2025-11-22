@@ -1,0 +1,221 @@
+%-------------------------
+% Resume in Latex
+% Author: Pradyum Chitlu (Adapted from Jake Gutierrez's template)
+% Based off of: https://github.com/sb2nov/resume
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Pradyum Chitlu} \\ \vspace{1pt}
+    2523 Euclid Place, Fremont, CA 94539 \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 510-514-8333 ~ \href{mailto:pchitlu@purdue.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{pchitlu@purdue.edu}} ~ 
+    \href{https://linkedin.com/in/pradyum-chitlu}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/pradyum-chitlu}}  ~
+    \href{https://github.com/pradyumchitlu}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/pradyumchitlu}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Purdue University}{Aug. 2024 -- May 2028} % UPDATED GRADUATION DATE
+      {Bachelor of Science in Data Science \& Computer Science (Intended Double Major)}{3.74 GPA}
+  \resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    \begin{multicols}{3}
+        \begin{itemize}[itemsep=-5pt, parsep=3pt]
+            \item\small Java Programming
+            \item\small Programming in C
+            \item\small Semiconductors
+            \item\small Macroeconomics
+            \item\small Data Mine (R, Python, SQL)
+            \item\small Linear Algebra
+            \item\small Discrete Mathematics
+            \item\small Multivariable Calculus
+            \item\small Programming in C++ % Added C++ course here
+        \end{itemize}
+    \end{multicols}
+    \vspace*{2.0\multicolsep}
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Quantitative Analyst}{Jan 2025 -- Present}
+      {Purdue's Boiler Quant Finance Group}{West Lafayette, IN}
+      \resumeItemListStart
+        \resumeItem{Led software development for affiliated social investing startup ("Ports"): developed the React Native front-end and integrating a transformer AI model back-end for stock query analysis.}
+        \resumeItem{Applied quantitative strategies in trading simulation and financial analysis to optimize portfolio performance.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+    {Computational Biology Researcher}{July 2023}
+    {Carnegie Mellon University, School of Computer Science}{Pittsburgh, PA}
+    \resumeItemListStart
+      \resumeItem{Developed and implemented algorithms in Go for bioinformatics analysis, applying principles of string processing, tree construction (UPGMA), and heuristic optimization determining species composition from metagenomic data.}
+      \resumeItem{Designed computational workflows analyzing large-scale DNA sequence datasets, employing statistical methods and simulation concepts to quantify microbial diversity and model evolutionary relationships.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{ArisTalkle - AI Debate Platform}}{Feb 2025 - Present}
+\resumeItemListStart
+\resumeItem{Led development of an award-winning AI debate platform using Flask, Next.js, and MongoDB that analyzes user videos, generates counterarguments, and creates synchronized AI debate responses.} % Integrated key tech here
+\resumeItem{Integrated multiple AI APIs (Google Gemini, Cartesia's Sonic AI, Sync.so) for content analysis, text-to-speech conversion, and video synchronization.}
+\resumeItem{Won "Most Likely to Become a Business" award at Purdue's BoilerMake hackathon for innovative approach.}
+\resumeItemListEnd
+\vspace{-17pt} % Kept vertical space adjustment
+
+\resumeProjectHeading
+{\textbf{LLM-Powered PDF RAG System}}{Jan 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Developed a Retrieval-Augmented Generation (RAG) system using LLAMA and Mistral instruct models for querying PDF documents.}
+\resumeItem{Implemented with PyTorch and Hugging Face for intelligent PDF search and high-accuracy response generation.}
+\resumeItemListEnd
+\vspace{-15pt} % Kept vertical space adjustment
+
+\resumeProjectHeading
+{\textbf{Analyzed ML Methods for Climate Change Impact on Crop Yields}}{June 2023 -- Dec. 2023}
+\resumeItemListStart
+  \resumeItem{Developed and evaluated machine learning models (XGBoost, KNN, Time Series) with feature engineering minimizing RMSE in crop yield loss prediction.}
+  \resumeItem{Analyzed model feature importance using Shapley values and identified key geographical anomalies by integrating diverse climate, agricultural, and geospatial datasets; selected for American Geophysical Union poster presentation.}
+\resumeItemListEnd
+\vspace{-15pt} % Kept vertical space adjustment
+
+\resumeProjectHeading
+{\textbf{CricCatapult: Cricket Data Aggregation Package}}{May 2022 -- Oct. 2022}
+\resumeItemListStart
+\resumeItem{Created an API wrapper in Python for ESPN Cricinfo and Cricsheet, delivering cricket data in CSV, JSON, and YAML formats.}
+\resumeItem{Contributed to cricket analytics research (20k downloads) with version control using Git/GitHub; accepted for Carnegie Mellon Sports Analytics Conference poster presentation.} % Mentioned Git here
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-15pt} % Kept vertical space adjustment
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, JavaScript, C++, SQL, Go, R, C, HTML/CSS} \\
+     \textbf{Databases}{: PostgreSQL, MongoDB, SQL} \\
+     \textbf{Networking}{: TCP/IP Model (Layers), Socket Programming} \\ % ADDED Networking section
+     \textbf{AI/ML/Data Science}{: PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Plotly} \\
+     \textbf{Web Technologies}{: React Native, Node.js, Express.js, Flask, Tailwind CSS} \\
+     \textbf{Developer Tools}{: Git, Docker, VS Code (Cursor, Windsurf), GitHub, Google Colab} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt} % Keep vertical space adjustment if needed
+
+%-----------AWARDS---------------
+\section{Awards}
+\resumeSubHeadingListStart
+\resumeSubItem{"Most Likely to Become a Business" Award - BoilerMake Hackathon, Purdue University, 2025}
+\resumeSubItem{1590 SAT Score (99th Percentile)} % Shortened
+\resumeSubItem{US Junior Nationals Chess Championship, 2nd Place (Age Group, 2013); Chess.com Rating: 2000 ELO} % Combined Chess
+\resumeSubHeadingListEnd
+\vspace{-0pt} % May need adjustment based on final spacing
+\end{document}
