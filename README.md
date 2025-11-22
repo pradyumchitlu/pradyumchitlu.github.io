@@ -1,36 +1,41 @@
 # Personal Portfolio Website
 
+This is a personal portfolio website for Pradyum Chitlu, built with [Next.js](https://nextjs.org).
+
 ## Overview
-This is a personal portfolio website for Pradyum Chitlu, showcasing professional skills, projects, and contact information.
+This website showcases professional skills, projects, and contact information. It has been migrated from a static HTML/CSS site to a modern Next.js application.
 
 ## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- Google Fonts
-- Font Awesome Icons
+- [Next.js](https://nextjs.org)
+- React
+- TypeScript
+- Tailwind CSS (if applicable, or CSS Modules)
+- Vercel (Deployment)
 
-## Features
-- Responsive Design
-- Smooth Scrolling
-- Interactive Contact Form
-- Project Showcase
-- Dynamic Typing Effect
-- Hover Animations
+## Getting Started
 
-## Setup and Installation
-1. Clone the repository
-2. Open `index.html` in your web browser
+First, run the development server:
 
-## Customization
-- Update personal information in `index.html`
-- Modify styles in `styles.css`
-- Add your projects in the Projects section
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Contact
-- Email: pradyum.chitlu@example.com
-- LinkedIn: https://www.linkedin.com/in/pradyum-chitlu/
-- GitHub: https://github.com/pradyumchitlu
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## License
-This project is open source and available under the [MIT License].
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
