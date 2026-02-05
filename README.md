@@ -1,41 +1,48 @@
 # Personal Portfolio Website
 
-This is a personal portfolio website for Pradyum Chitlu, built with [Next.js](https://nextjs.org).
+This is a personal portfolio website for Pradyum Chitlu.
 
 ## Overview
-This website showcases professional skills, projects, and contact information. It has been migrated from a static HTML/CSS site to a modern Next.js application.
+Full-stack setup:
+- **Frontend:** Next.js (React) static site
+- **Backend:** Node.js + Express API (for contact + data)
 
 ## Technologies Used
-- [Next.js](https://nextjs.org)
-- React
-- TypeScript
-- Tailwind CSS (if applicable, or CSS Modules)
-- Vercel (Deployment)
+- Frontend: Next.js, React, TypeScript, Tailwind CSS
+- Backend: Express, CORS
 
 ## Getting Started
 
-First, run the development server:
+### 1) Install dependencies
+
+```bash
+npm install
+cd server && npm install
+```
+
+### 2) Run frontend + backend (dev)
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Frontend runs on `http://localhost:3000`. Backend runs on `http://localhost:4000`.
 
-## Learn More
+### Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+- Frontend: `NEXT_PUBLIC_API_BASE_URL` (default: `http://localhost:4000`)
+- Backend:
+  - `PORT` (default: `4000`)
+  - `CORS_ORIGINS` (comma-separated, optional)
+  - `CONTACT_WEBHOOK_URL` (optional; if unset, messages append to `.data/contact-messages.jsonl`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend API
 
-## Deploy on Vercel
+- `GET /health`
+- `GET /projects`
+- `POST /contact` body: `{ "name": "...", "email": "...", "message": "..." }`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment notes
 
+- The GitHub Pages workflow deploys the **frontend** only.
+- Deploy the **backend** separately (Render/Fly/Railway/etc) and set `NEXT_PUBLIC_API_BASE_URL` + `CORS_ORIGINS` accordingly.

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -10,17 +11,10 @@ export default function Hero() {
             id="home"
             className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
         >
-            {/* Speed Force Background Effect */}
+            {/* Background */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-warriors-blue/20 via-space-dark to-space-dark" />
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_70%)]" />
-
-                {/* Animated Lightning Lines */}
-                <div className="absolute inset-0 opacity-30">
-                    <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-transparent via-flash-yellow to-transparent animate-pulse-fast" style={{ animationDuration: '3s' }} />
-                    <div className="absolute top-0 left-3/4 w-1 h-full bg-gradient-to-b from-transparent via-flash-yellow to-transparent animate-pulse-fast" style={{ animationDuration: '5s', animationDelay: '1s' }} />
-                    <div className="absolute top-1/3 left-0 w-full h-1 bg-gradient-to-r from-transparent via-flash-red to-transparent animate-pulse-fast" style={{ animationDuration: '4s' }} />
-                </div>
             </div>
 
             <div className="relative z-10 container mx-auto px-4 text-center">
@@ -37,8 +31,8 @@ export default function Hero() {
                         width={200}
                         height={200}
                         className="rounded-full border-4 border-warriors-gold shadow-[0_0_30px_rgba(255,199,44,0.5)] relative z-10 object-cover"
-                        priority
-                    />
+                    priority
+                />
                 </motion.div>
 
                 <motion.h1
@@ -60,9 +54,29 @@ export default function Hero() {
                 </motion.p>
 
                 <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.55, duration: 0.6 }}
+                    className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10"
+                >
+                    <Link
+                        href="#projects"
+                        className="inline-flex items-center justify-center rounded-lg bg-warriors-gold text-space-dark px-5 py-2 font-bold font-orbitron hover:brightness-110 transition w-full sm:w-auto"
+                    >
+                        View projects
+                    </Link>
+                    <Link
+                        href="#contact"
+                        className="inline-flex items-center justify-center rounded-lg border border-warriors-blue/30 bg-space-light/20 px-5 py-2 font-bold font-orbitron text-gray-100 hover:border-warriors-gold/60 hover:text-warriors-gold transition w-full sm:w-auto"
+                    >
+                        Contact
+                    </Link>
+                </motion.div>
+
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6, duration: 0.8 }}
+                    transition={{ delay: 0.7, duration: 0.8 }}
                     className="flex justify-center space-x-6"
                 >
                     <SocialLink href="mailto:pchitlu@purdue.edu" icon={<Mail />} label="Email" />

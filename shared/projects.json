@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "labor-market-intelligence",
+    "title": "Labor Market Intelligence Platform",
+    "type": "Live App",
+    "tech": ["GCP", "BigQuery", "Docker", "SQL"],
+    "highlights": [
+      "Operate a serverless AI platform on Google Cloud with real-time salary analytics and high uptime.",
+      "Reduced operational costs dramatically by redesigning data and compute workflows.",
+      "Built scalable ingestion + analytics pipelines as the core data engine."
+    ],
+    "href": "https://ai-jobs-dashboard-bdbs2vtlca-uc.a.run.app/"
+  },
+  {
+    "slug": "aristalkle",
+    "title": "ArisTalkle — AI Debate Platform",
+    "type": "Award-Winning",
+    "tech": ["Flask", "MongoDB", "LLM APIs", "TTS"],
+    "highlights": [
+      "Led product development from concept to prototype for an AI-driven debate platform.",
+      "Integrated multiple LLM and text-to-speech APIs with retries and orchestration."
+    ],
+    "href": "https://devpost.com/software/aristalkle"
+  },
+  {
+    "slug": "criccatapult",
+    "title": "CricCatapult — Cricket Data Toolkit",
+    "type": "Open Source",
+    "tech": ["Python", "Selenium", "SQL"],
+    "highlights": [
+      "Engineered a toolkit for large-scale sports analytics over hundreds of thousands of records.",
+      "Built ingestion utilities and docs to support a broad user base."
+    ],
+    "href": "https://github.com/aadrijupadya/CricCatapult"
+  },
+  {
+    "slug": "nba-analytics-toolkit",
+    "title": "NBA Analytics Toolkit & Playoff Model",
+    "type": "Analytics",
+    "tech": ["Python", "Pandas", "Modeling", "APIs"],
+    "highlights": [
+      "Built internal tooling to explore team-season features and simulate series matchups.",
+      "Exposed inference and data access endpoints for analysis workflows."
+    ],
+    "href": "https://github.com/pradyumchitlu/nba-analytics"
+  },
+  {
+    "slug": "fantasy-football-projections",
+    "title": "Fantasy Football Projections",
+    "type": "ML",
+    "tech": ["Python", "XGBoost", "ETL"],
+    "highlights": [
+      "Designed a clean schema + ETL for weekly updates and scenario testing.",
+      "Trained per-position models with validation and reporting."
+    ],
+    "href": "https://github.com/pradyumchitlu/fantasy-football"
+  },
+  {
+    "slug": "interpretable-ml-climate",
+    "title": "Interpretable ML for Climate Impact",
+    "type": "Research",
+    "tech": ["XGBoost", "SHAP", "NOAA", "USDA"],
+    "highlights": [
+      "Applied explainable ML techniques to climate and agriculture signals.",
+      "Delivered dashboards and reports with interpretable drivers of outcomes."
+    ],
+    "href": "https://ui.adsabs.harvard.edu/abs/2023AGUFMED41C0891U/abstract"
+  }
+]
