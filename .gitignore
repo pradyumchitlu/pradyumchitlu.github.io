@@ -44,3 +44,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# latex resume (build artifacts in repo root)
+/resume.aux
+/resume.fdb_latexmk
+/resume.fls
+/resume.out
+/resume.pdf
+/public/resume.pdf

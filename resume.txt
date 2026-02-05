@@ -1,10 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author: Pradyum Chitlu (Adapted from Jake Gutierrez's template)
-% Based off of: https://github.com/sb2nov/resume
-% License: MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -18,25 +11,18 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
 \usepackage{multicol}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
 %----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
+% Using default Computer Modern font
+\usepackage[T1]{fontenc}
+\providecommand{\Phone}{\Mobilefone}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -59,7 +45,7 @@
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure ATS readability
 \pdfgentounicode=1
 
 %-------------------------
@@ -103,10 +89,11 @@
 %----------HEADING----------
 \begin{center}
     {\Huge \scshape Pradyum Chitlu} \\ \vspace{1pt}
-    2523 Euclid Place, Fremont, CA 94539 \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\faPhone\ 510-514-8333 ~ \href{mailto:pchitlu@purdue.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{pchitlu@purdue.edu}} ~ 
-    \href{https://linkedin.com/in/pradyum-chitlu}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/pradyum-chitlu}}  ~
-    \href{https://github.com/pradyumchitlu}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/pradyumchitlu}}
+    \small \textit{Software Engineer $|$ Cloud Infrastructure $|$ ML Systems $|$ Real-Time Data Pipelines} \\ \vspace{3pt}
+    West Lafayette, IN \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\Phone\ 510-514-8333 ~ \href{mailto:pchitlu@purdue.edu}{\raisebox{-0.2\height}\Letter\  \underline{pchitlu@purdue.edu}} ~
+    \href{https://linkedin.com/in/pradyum-chitlu}{\underline{linkedin.com/in/pradyum-chitlu}}  ~
+    \href{https://github.com/pradyumchitlu}{\underline{github.com/pradyumchitlu}}
     \vspace{-8pt}
 \end{center}
 
@@ -114,108 +101,98 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Purdue University}{Aug. 2024 -- May 2028} % UPDATED GRADUATION DATE
-      {Bachelor of Science in Data Science \& Computer Science (Intended Double Major)}{3.74 GPA}
-  \resumeSubHeadingListEnd
-
-%------RELEVANT COURSEWORK-------
-\section{Relevant Coursework}
-    \begin{multicols}{3}
-        \begin{itemize}[itemsep=-5pt, parsep=3pt]
-            \item\small Java Programming
-            \item\small Programming in C
-            \item\small Semiconductors
-            \item\small Macroeconomics
-            \item\small Data Mine (R, Python, SQL)
-            \item\small Linear Algebra
-            \item\small Discrete Mathematics
-            \item\small Multivariable Calculus
-            \item\small Programming in C++ % Added C++ course here
-        \end{itemize}
-    \end{multicols}
-    \vspace*{2.0\multicolsep}
-
-%-----------WORK EXPERIENCE-----------
-\section{Work Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Quantitative Analyst}{Jan 2025 -- Present}
-      {Purdue's Boiler Quant Finance Group}{West Lafayette, IN}
+      {Purdue University}{Expected May 2027}
+      {B.S. Computer Science (Machine Intelligence Track) \& B.S. Data Science}{}
       \resumeItemListStart
-        \resumeItem{Led software development for affiliated social investing startup ("Ports"): developed the React Native front-end and integrating a transformer AI model back-end for stock query analysis.}
-        \resumeItem{Applied quantitative strategies in trading simulation and financial analysis to optimize portfolio performance.}
+        \resumeItem{Coursework: Data Structures \& Algorithms, Computer Architecture (ARM), Systems Programming (C/C++), Linear Algebra, Statistics, Data Mining, Distributed Systems \textbf{$|$ SAT: 1590/1600}}
       \resumeItemListEnd
-
-    \resumeSubheading
-    {Computational Biology Researcher}{July 2023}
-    {Carnegie Mellon University, School of Computer Science}{Pittsburgh, PA}
-    \resumeItemListStart
-      \resumeItem{Developed and implemented algorithms in Go for bioinformatics analysis, applying principles of string processing, tree construction (UPGMA), and heuristic optimization determining species composition from metagenomic data.}
-      \resumeItem{Designed computational workflows analyzing large-scale DNA sequence datasets, employing statistical methods and simulation concepts to quantify microbial diversity and model evolutionary relationships.}
-    \resumeItemListEnd
   \resumeSubHeadingListEnd
-\vspace{-16pt}
 
-%-----------PROJECTS-----------
-\section{Projects}
+%-----------SKILLS-----------
+\section{Technical Skills}
+ \resumeSubHeadingListStart
+    \item \small{
+        \textbf{Languages:} Python, Go, C/C++, Java, JavaScript/TypeScript, SQL, R \hfill \textbf{Tools:} Git, Docker, Kubernetes, CI/CD, Linux \\
+        \textbf{Infrastructure:} GCP (Cloud Run, BigQuery), Kafka, Redis, DuckDB, MongoDB, PostgreSQL, Terraform \\
+        \textbf{ML/Data:} PyTorch, Scikit-learn, XGBoost, Isolation Forest, PCA, SHAP $|$ \textbf{Frameworks:} FastAPI, Flask, Next.js, React, Socket.io \\
+        \textbf{Domains:} Supply Chains, Business Intelligence, Finance
+    }
+ \resumeSubHeadingListEnd
+ \vspace{-12pt}
+
+%-----------TECHNICAL PROJECTS-----------
+\section{Technical Projects}
 \vspace{-5pt}
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{ArisTalkle - AI Debate Platform}}{Feb 2025 - Present}
+{\textbf{COSMOS-Lite: Streaming Anomaly Detection Engine} $|$ \textit{Python, Kafka, FastAPI, DuckDB, Docker}}{}
 \resumeItemListStart
-\resumeItem{Led development of an award-winning AI debate platform using Flask, Next.js, and MongoDB that analyzes user videos, generates counterarguments, and creates synchronized AI debate responses.} % Integrated key tech here
-\resumeItem{Integrated multiple AI APIs (Google Gemini, Cartesia's Sonic AI, Sync.so) for content analysis, text-to-speech conversion, and video synchronization.}
-\resumeItem{Won "Most Likely to Become a Business" award at Purdue's BoilerMake hackathon for innovative approach.}
+    \resumeItem{Architected a \textbf{high-throughput telemetry pipeline} inspired by NVIDIA Morpheus, ingesting PCIe/CXL data streams via Kafka with DuckDB for \textbf{low-latency time-series storage}.}
+    \resumeItem{Implemented real-time anomaly detection using \textbf{Isolation Forest and PCA}, achieving \textbf{sub-50ms inference latency}; containerized full microservices stack with Docker Compose for reproducible deployments.}
 \resumeItemListEnd
-\vspace{-17pt} % Kept vertical space adjustment
+\vspace{-10pt}
 
 \resumeProjectHeading
-{\textbf{LLM-Powered PDF RAG System}}{Jan 2025 -- Present}
+{\textbf{Labor Market Intelligence Platform} $|$ \textit{GCP, BigQuery, Docker, Cloud Run} $|$ \href{https://ai-jobs-dashboard-bdbs2vtlca-uc.a.run.app/}{Live}}{}
 \resumeItemListStart
-\resumeItem{Developed a Retrieval-Augmented Generation (RAG) system using LLAMA and Mistral instruct models for querying PDF documents.}
-\resumeItem{Implemented with PyTorch and Hugging Face for intelligent PDF search and high-accuracy response generation.}
+    \resumeItem{Architected \textbf{serverless analytics platform} on GCP with \textbf{99.9\% uptime}; engineered \textbf{95\% cost reduction} (\$50K+ to <\$10/mo) via query optimization and caching.}
+    \resumeItem{Built ETL pipelines in BigQuery processing \textbf{15,000+ records in <2s} with scheduled batch ingestion and incremental updates.}
 \resumeItemListEnd
-\vspace{-15pt} % Kept vertical space adjustment
+\vspace{-10pt}
 
 \resumeProjectHeading
-{\textbf{Analyzed ML Methods for Climate Change Impact on Crop Yields}}{June 2023 -- Dec. 2023}
+{\textbf{ArisTalkle: AI Debate Platform} $|$ \textit{Flask, MongoDB, LLM APIs} $|$ \href{https://devpost.com/software/aristalkle}{Award-Winning}}{}
 \resumeItemListStart
-  \resumeItem{Developed and evaluated machine learning models (XGBoost, KNN, Time Series) with feature engineering minimizing RMSE in crop yield loss prediction.}
-  \resumeItem{Analyzed model feature importance using Shapley values and identified key geographical anomalies by integrating diverse climate, agricultural, and geospatial datasets; selected for American Geophysical Union poster presentation.}
+    \resumeItem{Led development of \textbf{multi-service AI pipeline} orchestrating Gemini API, Cartesia TTS, and Sync.so video generation with \textbf{exponential backoff retry logic} and Supabase storage integration.}
+    \resumeItem{Won \textbf{"Most Likely to Become a Business"} among 200+ teams; achieved \textbf{<5s end-to-end latency} for AI inference pipeline.}
 \resumeItemListEnd
-\vspace{-15pt} % Kept vertical space adjustment
+\vspace{-10pt}
 
 \resumeProjectHeading
-{\textbf{CricCatapult: Cricket Data Aggregation Package}}{May 2022 -- Oct. 2022}
+{\textbf{CricCatapult: ML-Powered Analytics Platform} $|$ \textit{Python, Scikit-learn, SQLite, Textual} $|$ \href{https://github.com/aadrijupadya/CricCatapult}{20K+ Downloads}}{}
 \resumeItemListStart
-\resumeItem{Created an API wrapper in Python for ESPN Cricinfo and Cricsheet, delivering cricket data in CSV, JSON, and YAML formats.}
-\resumeItem{Contributed to cricket analytics research (20k downloads) with version control using Git/GitHub; accepted for Carnegie Mellon Sports Analytics Conference poster presentation.} % Mentioned Git here
+  \resumeItem{Engineered \textbf{production-grade Python library} with CLI, TUI (Textual), and REST API; built \textbf{NLP query parser} and \textbf{ML model server} with joblib for player predictions.}
+  \resumeItem{Implemented usage analytics with SQLite, query caching with TTL, and feature engineering pipelines processing \textbf{500K+ match records}.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\vspace{-15pt} % Kept vertical space adjustment
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, Java, JavaScript, C++, SQL, Go, R, C, HTML/CSS} \\
-     \textbf{Databases}{: PostgreSQL, MongoDB, SQL} \\
-     \textbf{Networking}{: TCP/IP Model (Layers), Socket Programming} \\ % ADDED Networking section
-     \textbf{AI/ML/Data Science}{: PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Plotly} \\
-     \textbf{Web Technologies}{: React Native, Node.js, Express.js, Flask, Tailwind CSS} \\
-     \textbf{Developer Tools}{: Git, Docker, VS Code (Cursor, Windsurf), GitHub, Google Colab} \\
-    }}
- \end{itemize}
- \vspace{-16pt} % Keep vertical space adjustment if needed
+\vspace{-12pt}
 
-%-----------AWARDS---------------
-\section{Awards}
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Purdue Boiler Quant Finance Group}{Jan 2025 -- Present}
+      {Team Lead \& Quantitative Analyst}{West Lafayette, IN}
+      \resumeItemListStart
+        \resumeItem{\textbf{Ranked 1st of 30+ students} in trading competition, outperforming interns from Akuna Capital, TMG, and SIG.}
+        \resumeItem{Leading development of \textbf{prediction market strategies} using Kalshi API; applying ML/statistical models for alpha generation.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------RESEARCH-----------
+\section{Research \& Publications}
+\vspace{-5pt}
 \resumeSubHeadingListStart
-\resumeSubItem{"Most Likely to Become a Business" Award - BoilerMake Hackathon, Purdue University, 2025}
-\resumeSubItem{1590 SAT Score (99th Percentile)} % Shortened
-\resumeSubItem{US Junior Nationals Chess Championship, 2nd Place (Age Group, 2013); Chess.com Rating: 2000 ELO} % Combined Chess
+    \resumeProjectHeading
+    {\textbf{Interpretable ML for Climate-Driven Crop Yield Risk} $|$ \href{https://ui.adsabs.harvard.edu/abs/2023AGUFMED41C0891U/abstract}{\textit{AGU Fall Meeting 2023}}}{}
+    \resumeItemListStart
+        \resumeItem{Developed climate risk model using XGBoost + SHAP on \textbf{128 years of NOAA/USDA data}; achieved \textbf{92\% accuracy} on yield forecasting.}
+    \resumeItemListEnd
+    \resumeProjectHeading
+    {\textbf{Computational Biology Research} $|$ \textit{Carnegie Mellon University Pre-College Program}}{}
+    \resumeItemListStart
+        \resumeItem{Built Python algorithms for \textbf{de novo genome assembly}; applied ML classifiers to identify bacterial genomes with robotics automation.}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
-\vspace{-0pt} % May need adjustment based on final spacing
+\vspace{-12pt}
+
+%-----------LEADERSHIP-----------
+\section{Leadership \& Recognition}
+\resumeSubHeadingListStart
+    \resumeItem{\textbf{Invited Speaker:} Carnegie Mellon Sports Analytics Conference (2022) $|$ \textbf{Hackathon Organizer:} Directed nationwide sports analytics competition with MLB judges $|$ \textbf{Varsity Athlete:} CIF State Track \& Field qualifier}
+\resumeSubHeadingListEnd
+
 \end{document}

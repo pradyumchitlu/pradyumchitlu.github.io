@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617;
+  --background: #050814;
   --foreground: #F8FAFC;
-  --warriors-blue: #1D428A;
-  --warriors-gold: #FFC72C;
-  --flash-red: #B81D24;
-  --flash-yellow: #FFE800;
+  --warriors-blue: #A78BFA; /* violet */
+  --warriors-gold: #22D3EE; /* cyan */
+  --flash-red: #FB7185; /* rose */
+  --flash-yellow: #FDE047; /* yellow */
 }
 
 @theme inline {
@@ -16,8 +16,8 @@
   --color-warriors-gold: var(--warriors-gold);
   --color-flash-red: var(--flash-red);
   --color-flash-yellow: var(--flash-yellow);
-  --color-space-dark: #020617;
-  --color-space-light: #1e293b;
+  --color-space-dark: #050814;
+  --color-space-light: #0b1220;
 
   --font-orbitron: var(--font-orbitron);
   --font-exo2: var(--font-exo-2);

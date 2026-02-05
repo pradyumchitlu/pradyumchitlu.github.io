@@ -1,69 +1,57 @@
 [
   {
-    "slug": "labor-market-intelligence",
-    "title": "Labor Market Intelligence Platform",
-    "type": "Live App",
-    "tech": ["GCP", "BigQuery", "Docker", "SQL"],
+    "slug": "cosmos-lite",
+    "title": "COSMOS-Lite — Streaming Anomaly Detection Engine",
+    "type": "Inference / Real-Time",
+    "tech": ["Python", "Kafka", "FastAPI", "DuckDB", "Docker"],
     "highlights": [
-      "Operate a serverless AI platform on Google Cloud with real-time salary analytics and high uptime.",
-      "Reduced operational costs dramatically by redesigning data and compute workflows.",
-      "Built scalable ingestion + analytics pipelines as the core data engine."
-    ],
-    "href": "https://ai-jobs-dashboard-bdbs2vtlca-uc.a.run.app/"
+      "Architected a high-throughput telemetry pipeline inspired by NVIDIA Morpheus, ingesting PCIe/CXL streams via Kafka and storing time-series data in DuckDB.",
+      "Implemented Isolation Forest + PCA anomaly detection with sub-50ms inference latency; shipped as containerized microservices for reproducible deployments."
+    ]
   },
   {
     "slug": "aristalkle",
     "title": "ArisTalkle — AI Debate Platform",
-    "type": "Award-Winning",
+    "type": "Applied AI",
     "tech": ["Flask", "MongoDB", "LLM APIs", "TTS"],
     "highlights": [
-      "Led product development from concept to prototype for an AI-driven debate platform.",
-      "Integrated multiple LLM and text-to-speech APIs with retries and orchestration."
+      "Led a multi-service AI pipeline orchestrating Gemini API, Cartesia TTS, and Sync.so video generation with exponential-backoff retries and storage integration.",
+      "Won \"Most Likely to Become a Business\" among 200+ teams; achieved <5s end-to-end latency for the core inference flow."
     ],
     "href": "https://devpost.com/software/aristalkle"
   },
   {
-    "slug": "criccatapult",
-    "title": "CricCatapult — Cricket Data Toolkit",
-    "type": "Open Source",
-    "tech": ["Python", "Selenium", "SQL"],
+    "slug": "labor-market-intelligence",
+    "title": "Labor Market Intelligence Platform",
+    "type": "Decision Intelligence",
+    "tech": ["GCP", "BigQuery", "Cloud Run", "Docker", "SQL"],
     "highlights": [
-      "Engineered a toolkit for large-scale sports analytics over hundreds of thousands of records.",
-      "Built ingestion utilities and docs to support a broad user base."
+      "Built a serverless analytics platform on GCP with 99.9% uptime; cut costs 95% ($50K+ to < $10/mo) via query optimization and caching.",
+      "Designed BigQuery ETL pipelines processing 15,000+ records in <2s with scheduled batch ingestion and incremental updates.",
+      "Deployed with Docker + Cloud Run to power real-time job and salary insights."
     ],
-    "href": "https://github.com/aadrijupadya/CricCatapult"
-  },
-  {
-    "slug": "nba-analytics-toolkit",
-    "title": "NBA Analytics Toolkit & Playoff Model",
-    "type": "Analytics",
-    "tech": ["Python", "Pandas", "Modeling", "APIs"],
-    "highlights": [
-      "Built internal tooling to explore team-season features and simulate series matchups.",
-      "Exposed inference and data access endpoints for analysis workflows."
-    ],
-    "href": "https://github.com/pradyumchitlu/nba-analytics"
-  },
-  {
-    "slug": "fantasy-football-projections",
-    "title": "Fantasy Football Projections",
-    "type": "ML",
-    "tech": ["Python", "XGBoost", "ETL"],
-    "highlights": [
-      "Designed a clean schema + ETL for weekly updates and scenario testing.",
-      "Trained per-position models with validation and reporting."
-    ],
-    "href": "https://github.com/pradyumchitlu/fantasy-football"
+    "href": "https://ai-jobs-dashboard-bdbs2vtlca-uc.a.run.app/"
   },
   {
     "slug": "interpretable-ml-climate",
     "title": "Interpretable ML for Climate Impact",
-    "type": "Research",
+    "type": "Applied ML",
     "tech": ["XGBoost", "SHAP", "NOAA", "USDA"],
     "highlights": [
-      "Applied explainable ML techniques to climate and agriculture signals.",
-      "Delivered dashboards and reports with interpretable drivers of outcomes."
+      "Built an XGBoost + SHAP climate risk model using 128 years of NOAA/USDA data; achieved 92% accuracy on yield forecasting.",
+      "Prioritized interpretability: explained feature drivers and communicated results clearly for non-ML stakeholders."
     ],
     "href": "https://ui.adsabs.harvard.edu/abs/2023AGUFMED41C0891U/abstract"
+  },
+  {
+    "slug": "criccatapult",
+    "title": "CricCatapult — Cricket Data Toolkit",
+    "type": "ML Product",
+    "tech": ["Python", "Scikit-learn", "SQLite", "Textual"],
+    "highlights": [
+      "Engineered a production-grade Python library with CLI/TUI/REST API, plus an NLP query parser and model server for player predictions.",
+      "20K+ downloads; feature pipelines over 500K+ match records with caching and usage analytics."
+    ],
+    "href": "https://github.com/aadrijupadya/CricCatapult"
   }
 ]

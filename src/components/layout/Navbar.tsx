@@ -8,10 +8,10 @@ import Link from "next/link";
 const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Education", href: "#education" },
+    { name: "Focus", href: "#focus" },
     { name: "Projects", href: "#projects" },
-    { name: "Research", href: "#research" },
-    { name: "Interests", href: "#interests" },
+    { name: "Experience", href: "#experience" },
+    { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -38,7 +38,8 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
                         <Link href="/" className="text-2xl font-orbitron font-bold text-warriors-gold">
-                            PC
+                            <span className="hidden sm:inline">Pradyum Chitlu</span>
+                            <span className="sm:hidden">PC</span>
                         </Link>
                     </div>
                     <div className="hidden md:block">
@@ -47,7 +48,7 @@ export default function Navbar() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-gray-300 hover:text-warriors-gold hover:scale-110 transition-all duration-300 px-3 py-2 rounded-md text-sm font-medium font-orbitron"
+                                    className="text-gray-300 hover:text-warriors-gold transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium font-orbitron"
                                 >
                                     {link.name}
                                 </Link>
@@ -77,7 +78,7 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-gray-300 hover:text-warriors-gold block px-3 py-2 rounded-md text-base font-medium font-orbitron"
+                                className="text-gray-300 hover:text-warriors-gold transition-colors duration-200 block px-3 py-2 rounded-md text-base font-medium font-orbitron"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {link.name}

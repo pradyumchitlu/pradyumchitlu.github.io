@@ -1,10 +1,10 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Focus from "@/components/sections/Focus";
+import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
-import Education from "@/components/sections/Education";
-import Research from "@/components/sections/Research";
-import Interests from "@/components/sections/Interests";
+import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
 
 export default function Home() {
@@ -13,10 +13,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Education />
+      <Focus />
       <Projects />
-      <Research />
-      <Interests />
+      <Experience />
+      <Skills />
       <Contact />
 
       <footer className="py-8 text-center text-gray-500 text-sm font-mono border-t border-warriors-blue/20 bg-space-dark">

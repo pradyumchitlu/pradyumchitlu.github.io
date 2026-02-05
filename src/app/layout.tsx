@@ -14,7 +14,8 @@ const exo2 = Exo_2({
 
 export const metadata: Metadata = {
   title: "Pradyum Chitlu | Portfolio",
-  description: "Software Engineer specializing in building and scaling cloud-native AI products.",
+  description:
+    "Software engineer building low-latency data and ML systems: cloud infrastructure, real-time pipelines, and decision intelligence.",
 };
 
 export default function RootLayout({

@@ -8,7 +8,6 @@ import { API_BASE_URL } from "@/lib/env";
 
 export default function Projects() {
     const [projects, setProjects] = useState<Project[]>(fallbackProjects);
-    const [dataSource, setDataSource] = useState<"static" | "api">("static");
 
     useEffect(() => {
         const isLocalApi =
@@ -35,7 +34,6 @@ export default function Projects() {
 
                 if (cancelled || maybeProjects.length === 0) return;
                 setProjects(maybeProjects);
-                setDataSource("api");
             } catch {
                 // ignore; fallback to static projects
             }
@@ -56,11 +54,11 @@ export default function Projects() {
                     viewport={{ once: true }}
                     className="text-3xl md:text-4xl font-bold font-orbitron mb-12 text-center text-warriors-gold"
                 >
-                    Projects
+                    Selected Work
                 </motion.h2>
 
-                <p className="text-center text-xs text-gray-500 font-mono mb-8">
-                    Data source: <span className="text-gray-300">{dataSource}</span>
+                <p className="text-center text-sm text-gray-400 max-w-3xl mx-auto mb-10">
+                    Applied AI and inference systems, backed by real-time data pipelines and cloud infrastructure.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -71,7 +69,7 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative bg-space-dark border border-warriors-blue/20 rounded-xl p-6 hover:border-warriors-gold transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(29,66,138,0.3)]"
+                            className="group relative bg-space-dark border border-warriors-blue/20 rounded-xl p-6 hover:border-warriors-gold transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.18)]"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-warriors-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
 
@@ -88,10 +86,10 @@ export default function Projects() {
                                 </div>
 
                                 <div className="mb-4">
-                                    <span className="text-xs font-orbitron text-flash-yellow bg-flash-yellow/10 px-2 py-1 rounded border border-flash-yellow/20">
+                                    <span className="text-xs font-orbitron text-warriors-gold bg-warriors-gold/10 px-2 py-1 rounded border border-warriors-gold/20">
                                         {project.type}
                                     </span>
-                                    <span className="block mt-2 text-sm text-cyan-400 font-mono">
+                                    <span className="block mt-2 text-sm text-gray-200 font-mono">
                                         {project.tech.join(", ")}
                                     </span>
                                 </div>
@@ -106,6 +104,17 @@ export default function Projects() {
                             </div>
                         </motion.div>
                     ))}
+                </div>
+
+                <div className="mt-10 text-center">
+                    <a
+                        href="https://github.com/pradyumchitlu"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-mono text-gray-400 hover:text-warriors-gold transition-colors"
+                    >
+                        More projects on GitHub →
+                    </a>
                 </div>
             </div>
         </section>
